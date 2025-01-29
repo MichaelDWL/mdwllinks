@@ -1,0 +1,152 @@
+* {
+  /*comandos para redefinir os espaços do navegador*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-text: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.05);
+  --switch-bg-url: url(./assets/moon-starss.svg);
+}
+.light {
+  --color-text: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+body {
+  /*comandos para configurar o plano de fundo*/
+  /*background-image: url(./assets/bg-mobile.jpg); -> seleciona a img de fundo 
+  background-repeat: no-repeat; -> define que a imagem não repete 
+  background-position: top center; -> define que o background vai ser centralizado no meio 
+  background-size: cover; -> cover: cobrir, ou seja vai fazer com que cubra a tela */
+  background: var(--bg-url) no-repeat top center/cover; /*resumiu o comando acima*/
+}
+body * {
+  /*usei o comando para setar a fonte das letras e a cor dela*/
+  font-family: "Inter", sans-serif;
+  color: var(--color-text);
+}
+/*caixa principal ultilizada para configurar*/
+#caixa_principal {
+  width: 360px; /*largura da caixa*/
+  border: 1px; /*borda da caixa (apagar posteriormente) */
+  /*comandos separados para definir a margem-> margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;*/
+  margin: auto; /*define as margens como iguais em todos os lados*/
+  margin-top: 56px;
+  padding: 0 24px;
+}
+/*PROFILE*/
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+#profile img {
+  width: 112px; /*altura da img*/
+  display: block;
+  margin: auto;
+}
+#profile p {
+  font-weight: 500; /*força da fonte, "negrito"*/
+  line-height: 24px; /*altura da fonte*/
+  margin-top: 8px; /*espaço da img para a escrita*/
+}
+/*SWITCH*/
+#switch {
+  width: 64px;
+  position: relative;
+  margin: 4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white no-repeat var(--switch-bg-url) center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+.light #switch button {
+  left: initial;
+  right: 0;
+  top: 50%;
+  transform: translatey(-50%);
+}
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+/*links/list*/
+ul {
+  list-style: none; /*retira os pontos do formato de lista*/
+  display: flex; /*faz ela ser um display flexivel*/
+  flex-direction: column; /*define que a lista vai ser em formato de colula*/
+  gap: 16px; /*espaçamento entre os itens da lista*/
+  padding: 24px 0;
+}
+ul li a {
+  display: flex;
+  justify-content: center; /*alinha oq foi escrito meio da tela */
+  align-items: center; /*alinha oq foi escrito no meio da linha*/
+  padding: 16px 24px;
+  background: var(
+    --surface-color
+  ); /*quando mais perto do 0:preto, quando mais perto do 255:branco */
+  border: 1px solid var(--stroke-color); /*alpha:opacidade de 0 até 1*/
+  border-radius: 8px; /*para arrendondar as bordas*/
+  -webkit-backdrop-filter: blur(4px);
+  /*esse comando vai dar uma leve embaçada na box, mas é bom pesquisar no site caniuse.com para ver se tem restrição (por isso o comando webkit antes, para funcionar no safari)*/
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.5s;
+}
+/* pseudo-selector (aplica quando passar o mouse em cima)  */
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--color-text);
+}
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+#social-links a:hover {
+  background: var(--highlight-color);
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+}
