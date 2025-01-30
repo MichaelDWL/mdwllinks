@@ -29,6 +29,7 @@ body {
   background-position: top center; -> define que o background vai ser centralizado no meio 
   background-size: cover; -> cover: cobrir, ou seja vai fazer com que cubra a tela */
   background: var(--bg-url) no-repeat top center/cover; /*resumiu o comando acima*/
+  height: 100vh; /* ta falando pro background usar 100% da altura */
 }
 body * {
   /*usei o comando para setar a fonte das letras e a cor dela*/
@@ -37,8 +38,8 @@ body * {
 }
 /*caixa principal ultilizada para configurar*/
 #caixa_principal {
-  width: 100%; /*largura da caixa*/ 
-  max-width: 588px ;
+  width: 100%; /*largura da caixa*/
+  max-width: 588px;
   border: 1px; /*borda da caixa (apagar posteriormente) */
   /*comandos separados para definir a margem-> margin-left: auto;
   margin-right: auto;
@@ -150,4 +151,12 @@ footer {
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
+}
+@media (min-width: 700px) {
+  :root {
+    -bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light);
+  }
 }
