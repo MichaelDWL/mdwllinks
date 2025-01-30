@@ -82,12 +82,14 @@ body * {
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: Slide-out 0.2s;
 }
 .light #switch button {
-  left: initial;
-  right: 0;
-  top: 50%;
-  transform: translatey(-50%);
+  animation: slide-in 0.2s forwards;
+}
+#stutch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 #switch span {
   display: block;
@@ -158,5 +160,23 @@ footer {
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light);
+  }
+}
+/*animações*/
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes Slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
