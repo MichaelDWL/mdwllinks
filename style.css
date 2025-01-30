@@ -37,7 +37,8 @@ body * {
 }
 /*caixa principal ultilizada para configurar*/
 #caixa_principal {
-  width: 360px; /*largura da caixa*/
+  width: 100%; /*largura da caixa*/ 
+  max-width: 588px ;
   border: 1px; /*borda da caixa (apagar posteriormente) */
   /*comandos separados para definir a margem-> margin-left: auto;
   margin-right: auto;
