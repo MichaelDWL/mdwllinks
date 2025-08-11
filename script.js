@@ -6,11 +6,11 @@ function toggleMode() {
   const img = document.querySelector("#profile img")
   //se tiver no light mode, adicionar a img light
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./assets/MDWLPROFILE LIGHT.png")
+    img.setAttribute("src", "./assets/Logo-MDWL.LAB-bk.jpg")
   }
   //se tiver sem light mode, manter img normal
   else {
-    img.setAttribute("src", "./assets/MDWL PROFILE DARK.png")
+    img.setAttribute("src", "./assets/LOGO MDWL Lab.jpg")
   }
 
   //modo sem img

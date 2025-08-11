@@ -6,7 +6,7 @@
 }
 :root {
   --color-text: white;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mdwl/bg-mobile-black-mdwl.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -15,7 +15,7 @@
 }
 .light {
   --color-text: black;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-mdwl/bg-mobile-white-mdwl.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -156,10 +156,10 @@ footer {
 }
 @media (min-width: 700px) {
   :root {
-    -bg-url: url(./assets/bg-desktop.jpg);
+    -bg-url: url(./assets/bg-mdwl/bg-desktop-black-mdwl.jpg);
   }
   .light {
-    --bg-url: url(./assets/bg-desktop-light);
+    --bg-url: url(./assets/bg-mdwl/bg-desktop-white-mdwl.jpg);
   }
 }
 /*animações*/
